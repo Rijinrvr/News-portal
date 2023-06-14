@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  .container.mt-5
+    form(action='/edit/'+newsedit._id method='post')
+      .mb-3
+        h3 Edit NEWS
+        label.form-label(for='exampleInputEmail1') Title
+        input#exampleInputEmail1.form-control(type='text' value=newsedit.title name='title')
+      .mb-3
+        label.form-label(for='exampleInputPassword1') Content
+        input#exampleInputPassword1.form-control(type='text' value=newsedit.content name='content')
+      .mb-3
+        label.form-label(for='exampleInputPassword1') Image URL
+        input#exampleInputPassword1.form-control(type='text' value=newsedit.imageurl name='imageurl')
+       .mb-3
+        label.form-label(for='exampleInputPassword1') Vedio URL
+        input#exampleInputPassword1.form-control(type='text' value=newsedit.vediourl name='vediourl')
+      
+      
+      button.btn.btn-primary(type='submit') Submit

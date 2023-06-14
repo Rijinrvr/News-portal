@@ -1,0 +1,22 @@
+extends layout
+block content
+    .container.mt-5
+        form(action='/add' method='post')
+            .mb-3
+                h3 New NEWS
+                label Username
+                input#exampleInputEmail1.form-control(type='text' name='username')
+            .mb-3
+                label Title
+                input#exampleInputEmail1.form-control(type='text' name='title')
+            .mb-3
+                label Content
+                input#exampleInputPassword1.form-control(type='text' name='content')
+            .mb-3
+                label Image URL
+                input#exampleInputPassword1.form-control(type='text' name='imageurl')
+            .mb-3
+                label  Vedio URL
+                input#exampleInputPassword1.form-control(type='text' name='vediourl')
+
+                button.btn.button.mt-3.btn-primary(type='submit') Submit

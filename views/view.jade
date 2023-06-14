@@ -1,0 +1,13 @@
+extends layout 
+block content
+    .container 
+        h1.mt-5.d-flex.justify-content-center=newslist.title
+        hr
+        h3=newslist.content
+        img.mt-5.d-flex.justify-content-center(src=`${newslist.imageurl}` alt='Trulli' width='500' height='333') 
+        br
+        video(controls='' width='320' height='240')
+        source(src=`${newslist.vediourl}` type='video/mp4')
+        br
+        a.btn.btn-success.btn-right.mx-3(href='/edit/'+newslist._id) Edit
+        a.btn.btn-success.btn-right.mx-3(onclick="return confirm('Are you sure?')" href='/delete/'+newslist._id) Delete
